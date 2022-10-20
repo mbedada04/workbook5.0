@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let winningTickets = [
   { tixNum: "1001001", expires: "2022-09-05", prize: 100000 },
@@ -15,8 +15,22 @@ let winningTickets = [
 ];
 
 window.onload = () => {
-loadWinningTicketsTable();
+  loadWinningTicketsTable();
 };
 
-function loadWinningTicketsTable() {}
+function loadWinningTicketsTable() {
+  const winningTicketsTblBody = document.getElementById(
+    "winningTicketsTblBody"
+  );
+  for (const ticket of winningTickets) {
+    buildTicketRow(winningTicketsTblBody, ticket);
+  }
+}
+function buildTicketRow(tableBody, ticket) {
+  console.log(tableBody);
+  console.log(ticket);
+
+}
+
+
 
